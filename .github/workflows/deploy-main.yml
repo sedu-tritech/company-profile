@@ -16,4 +16,5 @@ jobs:
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
+          ssh-add -l
           cd ~/sedutritech.com && git pull origin main
